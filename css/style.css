@@ -337,6 +337,10 @@ li {
   .main h1::after {
     top: -10px;
   }
+  .header a {
+    font-size: 1rem;
+    padding: 10px;
+  }
   .container1 h2,
   .container2 h2 {
     font-size: 6rem;

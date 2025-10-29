@@ -42,7 +42,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 40px 20px;
   gap: 80px;
   align-items: center;
 }
@@ -54,11 +54,12 @@ li {
 .main h1::after {
   content: "";
   display: block;
-  width: 130px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   background: url("../img/detalhe.svg");
+  background-repeat: no-repeat;
   position: absolute;
-  top: -30px;
+  top: -25px;
   left: -40px;
   z-index: -1;
 }
@@ -221,4 +222,112 @@ li {
   background-size: contain;
   top: 0px;
   left: -30px;
+}
+/* responsive */
+@media (max-width: 800px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+  .main {
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    gap: 80px;
+  }
+  .main img {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+  .main h1::after {
+    display: none;
+  }
+  .container1 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .container2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+  .container2 h2 {
+    text-align: center;
+  }
+  .container2 div {
+    margin-bottom: 25px;
+  }
+  .curso::after {
+    left: 0px;
+    right: 20px;
+    top: -18px;
+  }
+  .idiomas::after {
+    left: 0px;
+    right: 20px;
+    top: -18px;
+  }
+  .curso,
+  .idiomas {
+    font-size: 2rem;
+  }
+  #curso,
+  #idiomas {
+    font-size: 1.3rem;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .texto {
+    grid-row: 1;
+  }
+  .email::after {
+    left: 0px;
+    right: 20px;
+    top: -25px;
+  }
+  #email {
+    margin-bottom: 60px;
+  }
+  .telefone::after {
+    left: 0px;
+    right: 20px;
+    top: -25px;
+  }
+  .contato {
+    grid-row: 2;
+  }
+  .copy {
+    grid-column: auto;
+    text-align: center;
+    font-size: 1rem;
+    /* margin-top: 20px; */
+  }
+}
+@media (max-width: 500px) {
+  .perfil {
+    height: 60%;
+    object-fit: cover;
+
+    /* display: none; */
+  }
+  .main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    gap: 0px;
+    padding-top: 0px;
+  }
+  .container1 h2,
+  .container2 h2 {
+    font-size: 6rem;
+  }
+  .container1 {
+    gap: 30px;
+  }
 }

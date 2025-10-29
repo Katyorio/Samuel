@@ -348,4 +348,10 @@ li {
   .container1 {
     gap: 30px;
   }
+  .container1 h2 {
+    color: black;
+  }
+  .container2 h2 {
+    color: white;
+  }
 }
